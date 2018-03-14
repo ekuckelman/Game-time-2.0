@@ -1,3 +1,63 @@
+body {
+  background-image: url('http://www.guoguiyan.com/data/out/196/68425299-thief-game-background-wallpapers.jpeg');
+  background-size: 100% 120%;
+  background-repeat: no-repeat;
+  font-family: 'Righteous', cursive;
+}
+
+button {
+  height: 8vh;
+  width: 14vh;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+h1 {
+  font-size: 9vh;
+  color: white;
+  margin: 0;
+  text-shadow: 2px 2px 8px #FF0000;
+}
+
+h2 {
+  color: #e0afaf;
+  font-size: 6vh;
+  margin: 2vh 0 2vh 0;
+}
+
+section {
+  text-align: center;
+}
+
+header {
+  text-align: center;
+}
+
 #game {
   border: solid;
+  background-color: black;
+  margin-top: 0px;
+  margin-left: 18vw;
+  border: 10px solid #1e2b2b;
+  width: 120vh;
+}
+
+.reStart {
+  background-image: url('http://retro-arcade.com/images/red_button_up.png');
+  background-size: 12vh 7vh;
+  background-repeat: no-repeat;
+  margin: 0, 21vh, 0, 8vh;
+}
+
+.start {
+  background-image: url('https://www.ota.com/sites/default/files/wysiwyg_uploads/video_game_style_button_1600_clr_5068.png');
+  background-size: 14vh 8vh;
+  background-repeat: no-repeat;
+}
+
+.instructions {
+  background-image: url('https://cdn1.iconfinder.com/data/icons/2012-04-26-Gloss-Mac-Sampler/512/Get_Info-01.png');
+  background-size: 8vh 7vh;
+  background-repeat: no-repeat;
 }

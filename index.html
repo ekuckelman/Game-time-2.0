@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>BreakOut</title>
-  <link rel="stylesheet" href="styles/index.css">
-</head>
-<body>
-  <canvas id="game" width="800" height="400"></canvas>
-  <script src="main.bundle.js"></script>
+  <head>
+    <meta charset="utf-8">
+    <title>BreakOut</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+        <h1>BrakeOut</h1>
+    </header>
+    <section>
+        <h2>Level 0</h2>
+    </section>
+    <canvas id="game"></canvas>
+    <section>
+        <button class='start'></button>
+        <button class='reStart'></button>
+        <button class='instructions'></button>
+    </section>
+    <audio id='game-intro-audio' autoplay loop>
+        <source src="images/Power Bots Loop.wav">
+    </audio>
+    <script src="main.bundle.js"></script>
 </body>
 </html>
