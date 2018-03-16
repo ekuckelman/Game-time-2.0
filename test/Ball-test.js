@@ -9,7 +9,7 @@ describe('Ball', () => {
   });
 
   it('should exist', () => {
-    assert.equal(Ball, {});
+    assert.equal(Ball, ());
   });
 });
 
