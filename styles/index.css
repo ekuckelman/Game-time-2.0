@@ -76,12 +76,12 @@ header {
 }
 
 .start-screen {
-  height: 430px;
-  width: 960px;
-  margin-left: 17%;
+  height: 500px;
+  width: 965px;
+  margin-left: 16%;
   background-color: #1e2b2b;
   position: absolute;
-  top: 13.2em;
+  top: 13.6em;
   text-align: center;
 }
 
@@ -91,6 +91,10 @@ header {
 }
 
 .start-game {
+  display: none;
+}
+
+.game-over {
   display: none;
 }
 
