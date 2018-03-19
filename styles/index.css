@@ -26,6 +26,12 @@ h2 {
   margin: 0;
 }
 
+h3{
+  color: white;
+  font-size: 4vh;
+  margin:0;
+}
+
 section {
   text-align: center;
 }
@@ -41,6 +47,13 @@ header {
   margin-left: 18vw;
   border: 10px solid #1e2b2b;
   width: 120vh;
+}
+
+.score{
+  display: flex;
+  width: 50%;
+  margin: 10px auto;
+  justify-content: space-between;
 }
 
 .levels{
