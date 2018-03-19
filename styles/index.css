@@ -44,17 +44,9 @@ header {
 #game {
   border: solid;
   background-color: black;
-  margin-top: 0px;
-  /*margin-left: 18vw;*/
+  margin-top: 3em;
   border: 10px solid #1e2b2b;
   width: 120vh;
-}
-
-.score{
-  display: flex;
-  width: 50%;
-  margin: 10px auto;
-  justify-content: space-between;
 }
 
 .levels {
@@ -81,13 +73,18 @@ header {
   margin-left: 16%;
   background-color: #1e2b2b;
   position: absolute;
-  top: 13.6em;
+  top: 12.7em;
   text-align: center;
 }
 
 .start-screen h2 {
   color: white;
   font-size: 1.6em;
+}
+
+.start-button {
+  color: #FF0000;
+  margin-bottom: .5em;
 }
 
 .start-game {

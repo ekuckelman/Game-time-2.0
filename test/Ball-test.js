@@ -27,11 +27,9 @@ let newBall
 
   it('should move', () => {
     newBall.moveBall(newBall);
-    assert.equal(newBall.x, newBall.x++)
-    assert.equal(newBall.y, newBall.y++)
+    assert.equal(newBall.x, newBall.x++);
+    assert.equal(newBall.y, newBall.y++);.
   })
-
-  it('should ')
 
 });
 
