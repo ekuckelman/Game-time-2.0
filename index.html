@@ -8,16 +8,23 @@
   </head>
   <body>
     <header>
-        <h1>BreakOut</h1>
+        <h1 class="main-title">Break Out</h1>
     </header>
-    <section class = 'levels'>
-        <h2>Level 0</h2>
-        <button class='instructions'></button>
+    <section class = "levels">
+        <h2 class="level">Level 1</h2>
+        <!-- <button class='instructions'></button> -->
     </section>
     <canvas id="game"></canvas>
+    <article class="start-screen">
+        <h2>Your Mission</h2>
+            <p class="instructions">To escape to the next level you must move your paddle at the bottom of the screen left or right to bounce the ball and destroy the bricks at the top of the screen. You can make the ball bounce off the walls, but watch out! If the ball goes below your paddle you lose 1 of your 3 lives.</p>
+        <h2>Controls</h2>
+            <p class="instructions">Use the left arrow to move left and the right arrow to move right.</p>
+        
+    </article>
     <section>
-        <button class='start'></button>
-        <button class='reStart'></button>
+        <button class="start"></button>
+        <button class="reStart"></button>
     </section>
     <audio id='game-intro-audio' autoplay loop>
         <!-- <source src="images/Power Bots Loop.wav"> -->

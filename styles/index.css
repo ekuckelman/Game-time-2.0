@@ -3,6 +3,7 @@ body {
   background-size: 100% 120%;
   background-repeat: no-repeat;
   font-family: 'Righteous', cursive;
+  text-align: center;
 }
 
 button {
@@ -13,16 +14,16 @@ button {
   outline: none;
 }
 
-h1 {
-  font-size: 9vh;
+.main-title {
+  font-size: 5em;
   color: white;
   margin: 0;
   text-shadow: 2px 2px 8px #FF0000;
 }
 
-h2 {
+.level {
   color: #e0afaf;
-  font-size: 6vh;
+  font-size: 2.5em;
   margin: 0;
 }
 
@@ -38,12 +39,12 @@ header {
   border: solid;
   background-color: black;
   margin-top: 0px;
-  margin-left: 18vw;
+  /*margin-left: 18vw;*/
   border: 10px solid #1e2b2b;
   width: 120vh;
 }
 
-.levels{
+.levels {
   display: flex;
   text-align: center;
   margin-left: 45%;
@@ -61,8 +62,27 @@ header {
   background-repeat: no-repeat;
 }
 
+.start-screen {
+  height: 500px;
+  width: 985px;
+  margin: 0em 14em;
+  background-color: #1e2b2b;
+  position: absolute;
+  top: 10em;
+  text-align: center;
+}
+
+.start-screen h2 {
+  color: white;
+  font-size: 2em;
+}
+
+.start-game {
+  display: none;
+}
+
 .instructions {
-  background-image: url('https://cdn1.iconfinder.com/data/icons/2012-04-26-Gloss-Mac-Sampler/512/Get_Info-01.png');
-  background-size: 4vh 4vh;
-  background-repeat: no-repeat;
+  color: white;
+  margin: 2em 7em;
+  font-size: 1.4em;
 }
