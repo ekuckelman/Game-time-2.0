@@ -76,18 +76,18 @@ header {
 }
 
 .start-screen {
-  height: 500px;
-  width: 985px;
-  margin: 0em 14em;
+  height: 430px;
+  width: 960px;
+  margin-left: 17%;
   background-color: #1e2b2b;
   position: absolute;
-  top: 10em;
+  top: 13.2em;
   text-align: center;
 }
 
 .start-screen h2 {
   color: white;
-  font-size: 2em;
+  font-size: 1.6em;
 }
 
 .start-game {
@@ -97,5 +97,5 @@ header {
 .instructions {
   color: white;
   margin: 2em 7em;
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
