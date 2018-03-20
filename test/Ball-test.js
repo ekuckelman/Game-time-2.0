@@ -14,21 +14,21 @@ let newBall
   });
 
   it('should take x, y and radius as arguments', () => {
-    assert.equal(newBall.x, '50')
-    assert.equal(newBall.y, '50')
-    assert.equal(newBall.radius, '5')
+    assert.equal(newBall.x, 50)
+    assert.equal(newBall.y, 50)
+    assert.equal(newBall.radius, 5)
   })
 
   it('should have velocity and color properties', () => {
-    assert.equal(newBall.dx, '1')
-    assert.equal(newBall.dy, '1')
+    assert.equal(newBall.dx, 2)
+    assert.equal(newBall.dy, 2)
     assert.equal(newBall.color, 'white')
   })
 
   it('should move', () => {
     newBall.moveBall(newBall);
-    assert.equal(newBall.x, newBall.x++);
-    assert.equal(newBall.y, newBall.y++);.
+    assert.equal(newBall.x, newBall.x++)
+    assert.equal(newBall.y, newBall.y++)
   })
 
 });
