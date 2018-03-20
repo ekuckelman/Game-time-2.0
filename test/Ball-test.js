@@ -20,8 +20,8 @@ let newBall
   })
 
   it('should have velocity and color properties', () => {
-    assert.equal(newBall.dx, 2)
-    assert.equal(newBall.dy, 2)
+    assert.equal(newBall.dx, 4)
+    assert.equal(newBall.dy, 4)
     assert.equal(newBall.color, 'white')
   })
 
@@ -29,7 +29,7 @@ let newBall
     newBall.moveBall(newBall);
     assert.equal(newBall.x, newBall.x++)
     assert.equal(newBall.y, newBall.y++)
-  })
+  });
 
 });
 
