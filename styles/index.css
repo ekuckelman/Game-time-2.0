@@ -95,6 +95,18 @@ header {
   display: none;
 }
 
+.show-game-over {
+  height: 500px;
+  width: 965px;
+  font-size: 3em;
+  margin-left: 16%;
+  background-color: #1e2b2b;
+  position: absolute;
+  top: 4.3em;
+  text-align: center;
+  color: white;
+}
+
 .instructions {
   color: white;
   margin: 2em 7em;
