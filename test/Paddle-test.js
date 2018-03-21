@@ -18,6 +18,10 @@ describe('Paddle', () => {
     assert.equal(newPaddle.h, 50);
   });
 
+  it('should have a default color', ()=> {
+    assert.equal(newPaddle.color, '#e0afaf');
+  });
+
   it('should have an x and a y as properties', ()=> {
     assert.equal(newPaddle.x, 420 - 50);
     assert.equal(newPaddle.y, 430 - 50);
@@ -25,6 +29,6 @@ describe('Paddle', () => {
 
   it('should move the paddle', ()=> {
     newPaddle.movePaddle();
-    assert.equal(newPaddle.x, 370 || 375);
+    assert.equal(newPaddle.x, 370);
   });
 });

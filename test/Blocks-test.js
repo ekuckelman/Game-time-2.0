@@ -1,12 +1,15 @@
 const chai = require('chai');
 const assert = chai.assert;
 const Blocks = require('../lib/Blocks');
+const Ball = require('../lib/Ball.js');
+const locus = require('locus');
 
 describe('Blocks', () => {
   let newBlocks;
-
+  let newBall;
   beforeEach(() => { 
    newBlocks = new Blocks(50, 50);
+   newBall = new Ball(150, 135, 12);
   });
 
   it('should exist', () => {
@@ -21,4 +24,31 @@ describe('Blocks', () => {
   it('should have a color by default', ()=> {
     assert.equal(newBlocks.color, '#5f7b7d');
   });
+
+  it('should not have any blocks in the array on default', ()=> {
+    assert.deepEqual(newBlocks.blocksArray, []);
+  });
+
+  it('should start the count of hit bricks at 0', ()=> {
+    assert.equal(newBlocks.count, 0);
+  });
+
+  it('should add blocks to the array', ()=> {
+    newBlocks.createBlockArray();
+    assert.deepEqual(newBlocks.blocksArray.length, 11);
+  });
+
+  it('should add to the count of hit bricks when a brick is hit', ()=> {
+    assert.equal(newBlocks.count, 0);
+    newBlocks.blockBallCollision = function() {
+    assert.equal(newBlocks.count, 1);  
+    };
+  });
+
+  it('should return true that the blocks count is 44', ()=> {
+    assert.equal(newBlocks.count, 0);
+    newBlocks.blocksCount = function() {
+    assert.equal(newBlocks.count, 44);  
+    };
+  });  
 });
