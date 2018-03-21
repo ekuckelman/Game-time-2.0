@@ -1,12 +1,15 @@
 const chai = require('chai');
 const assert = chai.assert;
 const Ball = require('../lib/Ball');
+const Paddle = require('../lib/Paddle');
 
 describe('Ball', () => {
 let newBall
+let newPaddle;
 
   beforeEach(() => { 
    newBall = new Ball(50, 50, 5)
+   newPaddle = new Paddle(120, 15);
   });
 
   it('should exist', () => {
@@ -29,6 +32,27 @@ let newBall
     newBall.moveBall(newBall);
     assert.equal(newBall.x, newBall.x++)
     assert.equal(newBall.y, newBall.y++)
+  });
+
+  it('should collide with the paddle', () => {
+    assert.isFunction(newBall.ballCollision)
+  });
+
+  it('should move to the other direction after it collides', () => {
+    assert.equal(newBall.dy, 4)
+    newBall.ballCollision = function() {
+    assert.equal(newBall.dy, -newBall.dy)   
+    }
+  });
+
+  it('should return true is the ball passes the paddle', () => {
+    assert.isFunction(newBall.gameOver)
+  });
+
+    it('should return true is the ball passes the paddle', () => {
+    newBall.ballCollision = function() {
+    assert.isTrue(newBall.gameOver)  
+    }
   });
 
 });
