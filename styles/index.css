@@ -83,7 +83,6 @@ header {
 }
 
 .start-button {
-  color: #FF0000;
   margin-bottom: .5em;
 }
 
@@ -96,13 +95,13 @@ header {
 }
 
 .show-game-over {
-  height: 470px;
-  width: 965px;
+  height: 500px;
+  width: 962px;
   font-size: 2.3em;
   margin-left: 16%;
   background-color: #1e2b2b;
   position: absolute;
-  top: 4.9em;
+  top: 5.6em;
   text-align: center;
   color: white;
   padding: 30px;
