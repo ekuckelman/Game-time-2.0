@@ -67,6 +67,29 @@ header {
   background-repeat: no-repeat;
 }
 
+.video{
+  text-align: center;
+  background-image: url('https://avatars.mds.yandex.net/get-pdb/812271/527fbb77-e356-485d-911c-657cf505aafb/orig');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 30;
+  background-size:contain;
+  top:1vh; 
+  background-repeat: no-repeat;
+  display: none;
+}
+
+.video img{
+  width: 90vh;
+  height: 40vh;
+  padding-top: 40vh;
+}
+
+.start-btn{
+
+}
+
 .start-screen {
   height: 500px;
   width: 965px;
