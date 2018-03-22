@@ -3,26 +3,32 @@ const assert = chai.assert;
 const Blocks = require('../lib/Blocks');
 const Ball = require('../lib/Ball.js');
 const locus = require('locus');
+const Block = require('../lib/Block.js');
+
+
 
 describe('Blocks', () => {
   let newBlocks;
   let newBall;
+  let newBlock
+
   beforeEach(() => { 
-   newBlocks = new Blocks(50, 50);
+   newBlocks = new Blocks();
    newBall = new Ball(150, 135, 12);
+   newBlock = new Block(68, 20, '#5f7b7d');
   });
 
   it('should exist', () => {
     assert.isFunction(Blocks);
   });
 
-  it('should have a width and height as parameters', ()=> {
-    assert.equal(newBlocks.width, 50);
-    assert.equal(newBlocks.height, 50);
+  it('should know the height and width of each block', ()=> {
+    assert.equal(newBlock.width, 68);
+    assert.equal(newBlock.height, 20);
   });
 
-  it('should have a color by default', ()=> {
-    assert.equal(newBlocks.color, '#5f7b7d');
+  it('each block should have a color by default', ()=> {
+    assert.equal(newBlock.color, '#5f7b7d');
   });
 
   it('should not have any blocks in the array on default', ()=> {
