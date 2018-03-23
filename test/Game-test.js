@@ -53,10 +53,6 @@ describe('Game', () => {
     }
   })
 
-  it('should stop the game if the user doesnt have lives', () => {
-    assert.isFunction(newGame.gameOver)
-  })
-
   it('should have different levels', () => {
     assert.isFunction(newGame.newLevel)
   })

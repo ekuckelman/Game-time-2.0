@@ -9,7 +9,7 @@ describe('Blocks', () => {
   let newBall;
   beforeEach(() => { 
    newBlocks = new Blocks(50, 50);
-   newBall = new Ball(150, 135, 12);
+   newBall = new Ball(60, 60, 12);
   });
 
   it('should exist', () => {
@@ -39,16 +39,11 @@ describe('Blocks', () => {
   });
 
   it('should add to the count of hit bricks when a brick is hit', ()=> {
+    newBlocks.createBlockArray();
     assert.equal(newBlocks.count, 0);
-    newBlocks.blockBallCollision = function() {
-    assert.equal(newBlocks.count, 1);  
-    };
-  });
-
-  it('should return true that the blocks count is 44', ()=> {
-    assert.equal(newBlocks.count, 0);
-    newBlocks.blocksCount = function() {
-    assert.equal(newBlocks.count, 44);  
-    };
-  });  
+    newBlocks.blockBallCollision(newBall);
+    newBlocks.count++;
+    assert.equal(newBlocks.count, 1); 
+    assert.isFunction(newBlocks.blocksCount);
+  }); 
 });
