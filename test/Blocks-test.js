@@ -3,10 +3,15 @@ const assert = chai.assert;
 const Blocks = require('../lib/Blocks');
 const Ball = require('../lib/Ball.js');
 const locus = require('locus');
+const Block = require('../lib/Block.js');
+
+
 
 describe('Blocks', () => {
   let newBlocks;
   let newBall;
+  let newBlock
+
   beforeEach(() => { 
    newBlocks = new Blocks(50, 50);
    newBall = new Ball(60, 60, 12);

@@ -39,21 +39,13 @@ let newPaddle;
   });
 
   it('should move to the other direction after it collides', () => {
-    assert.equal(newBall.dy, 4)
-    newBall.ballCollision = function() {
-    assert.equal(newBall.dy, -newBall.dy)   
-    }
+    let balldy = newBall.dy
+    newBall.ballCollision(newPaddle, balldy);
+    if(newPaddle.dy < balldy)
+    assert.equal(balldy, - 4)   
   });
 
-  it('should return true is the ball passes the paddle', () => {
-    assert.isFunction(newBall.gameOver)
+  it('should return true if the ball passes the paddle', () => {
+    assert.isFunction(newBall.gameOver) 
   });
-
-    it('should return true is the ball passes the paddle', () => {
-    newBall.ballCollision = function() {
-    assert.isTrue(newBall.gameOver)  
-    }
-  });
-
-});
-
+})

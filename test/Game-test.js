@@ -3,16 +3,19 @@ const assert = chai.assert;
 const Game = require('../lib/Game');
 const Ball = require('../lib/Ball');
 const Paddle = require('../lib/Paddle');
+const Blocks = require('../lib/Blocks.js');
 
 describe('Game', () => {
   let newGame;
   let newBall;
   let newPaddle;
+  let newBlocks;
 
   beforeEach(() => {
     newGame = new Game();
     newBall = new Ball(68, 20);
     newPaddle = new Paddle(120, 15);
+    newBlocks = new Blocks();
   })
 
   it('should exist', () => {
@@ -39,30 +42,29 @@ describe('Game', () => {
 
   it('should decrease lives if you dont hit the ball with the paddle', () => {
     assert.equal(newGame.lives, 3)
-    newGame.collision = function() {
+    newGame.collision();
     newGame.lives--;
     assert.equal(newGame.lives, 2)
-    }
   })
 
   it('should increase the score when a block is inactive', () => {
     assert.equal(newGame.scoreCount, 0)
-    newGame.collision = function() {
+    newGame.collision();
     newGame.scoreCount++;
     assert.equal(newGame.scoreCount, 1)
-    }
   })
 
   it('should have different levels', () => {
     assert.isFunction(newGame.newLevel)
   })
 
-  it('should have different levels', () => {
-    assert.equal(newGame.level, 1)
-    newGame.newLevel = function() {
+  it('should increase the difficulty', () => {
+    assert.equal(newGame.level, 1);
+    newBlocks.blocksCount()
     newGame.level++;
-    assert.equal(newGame.level, 2)
-  }
+    assert.equal(newGame.level, 2);
+
   })
+
 
 })
