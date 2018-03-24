@@ -16,15 +16,6 @@ describe('Blocks', () => {
     assert.isFunction(Blocks);
   });
 
-  it('should have a width and height as parameters', ()=> {
-    assert.equal(newBlocks.width, 50);
-    assert.equal(newBlocks.height, 50);
-  });
-
-  it('should have a color by default', ()=> {
-    assert.equal(newBlocks.color, '#5f7b7d');
-  });
-
   it('should not have any blocks in the array on default', ()=> {
     assert.deepEqual(newBlocks.blocksArray, []);
   });
