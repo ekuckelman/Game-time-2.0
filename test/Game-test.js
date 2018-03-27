@@ -40,17 +40,30 @@ describe('Game', () => {
     assert.isFunction(newGame.collision)
   })
 
-  it('should decrease lives if you dont hit the ball with the paddle', () => {
-    assert.equal(newGame.lives, 3)
-    newGame.collision();
-    newGame.lives--;
-    assert.equal(newGame.lives, 2)
+  it('should decrease the lives when newBall.gameOver returns true', () => {
+    // set up
+    audio = {play: function(){}}
+    audio2 = {play: function(){}}
+    newBall.gameOver = function(){
+      return true
+    }
+    // execution
+    newGame.collision(audio, audio2)
+
+    // assertion
+    assert.equal(newGame.lives, 3) 
   })
 
-  it('should increase the score when a block is inactive', () => {
-    assert.equal(newGame.scoreCount, 0)
-    newGame.collision();
-    newGame.scoreCount++;
+  it('should increase the score when newBlocks.blockBallCollision returns true', () => {
+   // set up
+   newBall = {x:60, y:20}
+   newBlocks.blockBallCollision = function(){
+    newGame.scoreCount ++
+    return true
+   }
+    // execution
+    newGame.collision(audio, audio2)
+    // assertion
     assert.equal(newGame.scoreCount, 1)
   })
 
