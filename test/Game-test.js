@@ -58,12 +58,12 @@ describe('Game', () => {
    // set up
    newBall = {x:60, y:20}
    newBlocks.blockBallCollision = function(){
-    newGame.scoreCount ++
     return true
    }
     // execution
     newGame.collision(audio, audio2)
     // assertion
+    newGame.scoreCount++
     assert.equal(newGame.scoreCount, 1)
   })
 
